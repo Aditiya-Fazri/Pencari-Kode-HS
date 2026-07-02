@@ -1,0 +1,16 @@
+# secrets
+.env
+
+# python
+venv/
+__pycache__/
+*.pyc
+
+# cache & artifact yang bisa di-regenerate
+cache_emb/
+
+# database runtime
+*.db
+
+# checkpoint eval
+experiments/*checkpoint*.json

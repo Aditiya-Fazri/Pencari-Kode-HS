@@ -1,0 +1,23 @@
+# API + frontend
+fastapi
+uvicorn
+streamlit
+requests
+
+# data
+pandas
+numpy
+openpyxl         
+
+# model / retrieval
+sentence-transformers
+transformers==4.44.2
+tokenizers==0.19.1
+huggingface-hub==0.25.2
+scipy==1.13.1
+scikit-learn==1.5.2
+torch==2.4.1
+
+# LLM (expansion + rerank)
+groq
+python-dotenv
