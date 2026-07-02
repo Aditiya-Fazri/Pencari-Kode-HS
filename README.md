@@ -89,5 +89,7 @@ models/       desc_emb.npy
 ```
 
 ## Dataset
-
 Buku Tarif Kepabeanan Indonesia (BTKI) 2022 dari BPS, 11.554 kode HS 8-digit, masing-masing dengan 1 deskripsi.
+
+## Demo
+   [pencari-kode-hs.streamlit.app](https://pencari-kode-hs.streamlit.app)
