@@ -85,7 +85,7 @@ with tab_cari:
         df = pd.DataFrame(hasil)
         df["peringkat"] = range(1, len(df) + 1)
         df = df.rename(columns={"hs_code": "Kode HS", "description": "Deskripsi",
-                                "Keterangan llm": "Keterangan"})
+                                "alasan": "Keterangan"})
         kolom = ["peringkat", "Kode HS", "Deskripsi"]
         if "Keterangan" in df.columns:
             kolom.append("Keterangan")
