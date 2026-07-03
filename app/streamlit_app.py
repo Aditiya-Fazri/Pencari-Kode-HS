@@ -41,7 +41,6 @@ def cari(query, top_k, api_key):
 
 
 st.title("Pencari Kode HS")
-st.caption("Isi nama barang, kalau ada tambahin deskripsinya biar hasilnya lebih tepat.")
 
 # sidebar: API key Groq (diinput user, gak ditaro di code)
 with st.sidebar:
@@ -116,7 +115,6 @@ with tab_cari:
 # TAB RIWAYAT
 with tab_riwayat:
     st.subheader("Riwayat Pencarian")
-    st.caption("Semua pencarian yang pernah dilakukan, tersimpan di database (riwayat.db).")
 
     rows = ambil_riwayat(limit=50)
     if rows:
