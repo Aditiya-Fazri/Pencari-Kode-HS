@@ -25,6 +25,6 @@ jobs:
           pip install -r requirements.txt
           pip install -e .
 
-      - name: Cek semua file Python bisa di-compile (tanpa error syntax)
+      - name: Cek semua file Python bisa di compile
         run: |
           python -m compileall src api app scripts
