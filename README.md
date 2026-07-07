@@ -2,7 +2,7 @@
 
 Aplikasi untuk mencari kode HS (Harmonized System) 8-digit dari nama barang berbahasa Indonesia menggunakan pendekatan *semantic search*.
 
-Contoh: input `gurita hidup` akan menghasilkan kode `03075110 - octopus, live` beserta alasan mengapa kode tersebut dipilih.
+Contoh: input `Iphone 17 Pro Max` akan menghasilkan kode `85171300 - cellular telephones including smartphones` beserta alasan mengapa kode tersebut dipilih.
 
 ## Fitur
 
@@ -14,6 +14,7 @@ Contoh: input `gurita hidup` akan menghasilkan kode `03075110 - octopus, live` b
 ## Tampilan
 
 ![Tampilan aplikasi](assets/app.png)
+![Tampilan crosswalk](assets/crosswalk.png)
 
 ## Latar belakang
 
