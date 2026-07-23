@@ -74,8 +74,10 @@ Jawab HANYA JSON, tanpa teks lain."""
     for i in range(retries):   # coba maksimal 3x kalau groq gagal
         try:
             resp = _client(api_key).chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="openai/gpt-oss-120b",
                 temperature=0,
+                reasoning_effort="low",
+                max_completion_tokens=6000,
                 messages=[{"role": "user", "content": prompt}],
             )
             teks = resp.choices[0].message.content
