@@ -55,14 +55,14 @@ Pendekatan yang digunakan adalah **retrieve-then-rerank**, bukan klasifikasi. Al
 
 1. Query di embedding, lalu dicocokkan ke seluruh deskripsi menggunakan *cosine similarity* (retrieve).
 2. Query juga di *expand* menggunakan LLM (misal "meja makan" menjadi "dining table") agar lebih sesuai dengan istilah pada dataset, kemudian dicari kembali. Hasil dua cabang ini digabungkan.
-3. Hasil gabungan di *rerank* menggunakan LLM (Llama 3.3 70B), lalu diurutkan berdasarkan tingkat kecocokan sekaligus diberi alasan pada setiap hasil.
+3. Hasil gabungan di *rerank* menggunakan LLM (openai/gpt-oss-120b), lalu diurutkan berdasarkan tingkat kecocokan sekaligus diberi alasan pada setiap hasil.
 
 Fitur crosswalk berjalan secara deterministik, mencocokkan 6-digit terlebih dahulu, jika tidak ditemukan turun ke 4-digit dengan Jaccard similarity untuk memilih yang paling mirip. Tidak menggunakan model/AI.
 
 ## Model & tools
 
 - Embedding: `paraphrase-multilingual-mpnet-base-v2`
-- LLM (expand + rerank): Llama 3.3 70B via Groq
+- LLM (expand + rerank): openai/gpt-oss-120b via Groq
 - Backend: FastAPI
 - Frontend: Streamlit
 - Database (riwayat pencarian): SQLite
@@ -74,7 +74,7 @@ Diuji menggunakan 60 query berbahasa Indonesia (hit-rate@5, level 6-digit):
 | Kondisi | hit@5 |
 |---|---|
 | Embedding saja | 63% |
-| + expand + rerank | 87% |
+| + expand + rerank | 88% |
 
 ## Struktur folder
 
