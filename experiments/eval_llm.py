@@ -15,7 +15,7 @@ load_dotenv()
 KS = [1, 3, 5]
 NDIGIT = 6          # level jenis produk (6-digit)
 POOL = 30           # sama kaya POOL_PER_CABANG di main.py
-DELAY_ANTAR_QUERY = 2.0   # jeda detik antar query
+DELAY_ANTAR_QUERY = 17.0   # jeda detik antar query
 
 BASE = os.path.dirname(os.path.abspath(__file__))     # folder experiments/
 EVAL_SET = os.path.join(BASE, "eval_set_bilingual.csv")
