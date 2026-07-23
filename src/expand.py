@@ -32,7 +32,7 @@ Output: MAX 10 words, no brand names, no model numbers, nothing else.'''
     for i in range(retries):   # coba maksimal 3x kalau groq gagal
         try:
             resp = _client(api_key).chat.completions.create(
-                model="llama-3.3-70b-versatile", temperature=0,   # temp 0 = jawaban konsisten
+                model="openai/gpt-oss-120b", temperature=0,   # temp 0 = jawaban konsisten
                 messages=[{"role": "user", "content": prompt}])
             return resp.choices[0].message.content.strip()        # ambil teks jawaban llm
         except Exception as e:
